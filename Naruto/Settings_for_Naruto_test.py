@@ -235,8 +235,8 @@ class Naruto(Ninja):
     # method for return jutsu to person1_this_is()
     def return_jutsu(self):
         return (f'''        3){self.name_jutsu1}-{self.damage_jutsu1}damage-{self.chakra_jutsu1}chakra
-        4){self.name_jutsu2}-{self.damage_jutsu2}-{self.chakra_jutsu2}chakra
-        5){self.name_jutsu3}-{self.damage_jutsu3}-{self.chakra_jutsu3}chakra''')
+            4){self.name_jutsu2}-{self.damage_jutsu2}-{self.chakra_jutsu2}chakra
+            5){self.name_jutsu3}-{self.damage_jutsu3}-{self.chakra_jutsu3}chakra''')
 
     # method for return clan jutsu to person1_this_is()
     def clan_return_jutsu(self):
@@ -277,15 +277,13 @@ class Sasuke(MangekyoSharingan, Rinnengan):
     def clan_return_jutsu(self):
         if not self.use_susano:
             return (f'''4){self.name_clan_jutsu1}-{self.damage_clan_jutsu1}-{self.chakra_clan_jutsu1}chakra
-            5){self.name_clan_jutsu2}-{self.damage_clan_jutsu2}damage,100постепенно 2 шага - {self.chakra_clan_jutsu2}
-chakra
-            6){self.name_clan_jutsu3}-{self.damage_clan_jutsu3}(1000)-{self.chakra_clan_jutsu3}chakra''')
+        5){self.name_clan_jutsu2}-{self.damage_clan_jutsu2}damage,100постепенно 2 шага - {self.chakra_clan_jutsu2}chakra
+        6){self.name_clan_jutsu3}-{self.damage_clan_jutsu3}(1000)-{self.chakra_clan_jutsu3}chakra''')
         elif self.use_susano:
             return (f'''4){self.name_clan_jutsu1}-{self.damage_clan_jutsu1}-{self.chakra_clan_jutsu1}chakra
-            5){self.name_clan_jutsu2}-{self.damage_clan_jutsu2}damage,100постепенно 2 шага - {self.chakra_clan_jutsu2}
-chakra
-            6){self.name_clan_jutsu3}-{self.damage_clan_jutsu3}damage-{self.chakra_clan_jutsu3}chakra
-            7){self.name_clan_jutsu4}-{self.damage_clan_jutsu4}damage-{self.chakra_clan_jutsu4}chakra''')
+        5){self.name_clan_jutsu2}-{self.damage_clan_jutsu2}damage,100постепенно 2 шага - {self.chakra_clan_jutsu2}chakra
+        6){self.name_clan_jutsu3}-{self.damage_clan_jutsu3}damage-{self.chakra_clan_jutsu3}chakra
+        7){self.name_clan_jutsu4}-{self.damage_clan_jutsu4}damage-{self.chakra_clan_jutsu4}chakra''')
 
 
 #######################################################################
@@ -298,11 +296,11 @@ def person1_this_is_(person_1, person_2):
     Health - {person_1.health} 
     Chakra - {person_1.chakra} 
         Basic:
-            1)Shuriken-{person_1.damage_shuriken},'''#chance {return_in_procent(person_2)}
-            f'''\n\t\t2)Kunai-{person_1.damage_kunai}
+            1)Shuriken-{person_1.damage_shuriken},
+            2)Kunai-{person_1.damage_kunai}
         Jutsu:''')
 
-    print(person_1.return_jutsu())  # return описание about jutsu
+    print(f'    {person_1.return_jutsu()}')  # return описание about jutsu
 
     if  person_1.clan_return_jutsu():
         print(f'''Clan jutsu:
